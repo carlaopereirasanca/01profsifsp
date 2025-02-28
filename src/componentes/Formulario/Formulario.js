@@ -5,8 +5,6 @@ import ListaSuspensa from "../ListaSuspensa/ListaSuspensa";
 import Botao from "../Botao/Botao";
 
 const Formulario = (props) => {
-  const areas = ["Progr. Básica", "Progr. Web", "Banco de Dados", "Diversos"];
-
   // Criando os estados...
   const [nome, setNome] = useState("");
   const [titulo, setTitulo] = useState("");
@@ -49,7 +47,7 @@ const Formulario = (props) => {
 
         <ListaSuspensa
           label="Áreas"
-          itens={areas}
+          itens={props.areas}
           aoAlterado={(valor) => setArea(valor)}
         />
 
